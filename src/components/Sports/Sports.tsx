@@ -6,14 +6,14 @@ import Image from "next/image";
 const Sports = () => {
 
     const sportsData = [
-        { imageSrc: rivercat, title: "Sacramento River Cats", totalEvents: 48, sport: "Baseball" },
-        { imageSrc: lasvegas, title: "Las Vegas Aviators", totalEvents: 28, sport: "Baseball" },
-        { imageSrc: newjersey, title: "New Jersey Devils", totalEvents: 15, sport: "Baseball" },
-        { imageSrc: lasvegas, title: "Las Vegas Aviators", totalEvents: 28, sport: "Baseball" }
+        { image: rivercat, title: "Sacramento River Cats", totalEvents: 48, sport: "Baseball" },
+        { image: lasvegas, title: "Las Vegas Aviators", totalEvents: 28, sport: "Baseball" },
+        { image: newjersey, title: "New Jersey Devils", totalEvents: 15, sport: "Baseball" },
+        { image: lasvegas, title: "Las Vegas Aviators", totalEvents: 28, sport: "Baseball" }
     ];
 
-    const advertisementData = {
-        imageSrc: ad,
+    const adData = {
+        image: ad,
         title: "Advertisement Title",
         content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
     };
@@ -25,7 +25,7 @@ const Sports = () => {
             <div className="flex justify-center gap-3">
                 {sportsData.map((data, index) => (
                     <div className="bg-white p-3" key={index}>
-                        <Image src={data.imageSrc} alt={data.title} width={218} height={385} />
+                        <Image src={data.image} alt={data.title} width={218} height={385} />
                         <h5 className="my-4 font-medium text-sm">{data.title}</h5>
                         <div style={{ backgroundColor: '#F7F7F8' }} className="p-3 gap-2 text-xs flex justify-between">
                             <div className="w-1/2">
@@ -40,10 +40,10 @@ const Sports = () => {
                     </div>
                 ))}
                 <div className="bg-white p-4">
-                    <Image src={advertisementData.imageSrc} alt={advertisementData.title} width={218} height={385} />
-                    <h5 className="my-4 font-medium text-sm">{advertisementData.title}</h5>
+                    <Image src={adData.image} alt={adData.title} width={218} height={385} />
+                    <h5 className="my-4 font-medium text-sm">{adData.title}</h5>
                     <div style={{ width: '218px' }}>
-                        <p className="text-xs">{advertisementData.content}</p>
+                        <p className="text-xs">{adData.content}</p>
                     </div>
                 </div>
             </div>

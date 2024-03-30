@@ -1,5 +1,6 @@
-import Collection from "./collection/page";
-import Sports from "./sports/page";
+import Collection from "@/components/Collection/Collection";
+import Sports from "@/components/Sports/Sports";
+
 
 export default function Home() {
   return (
